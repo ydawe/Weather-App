@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container top">
+            <h1>What is the weather like today?</h1>
+            <form action="" onsubmit="return false">
+                <input type="text" class="search" placeholder="Search by city name">
+                <button type="submit" class="btn">Submit</button>
+                <p class="error"></p>
+            </form>
+
+            <section>
+                <div class="container">
+                  
+                    <div class="location">
+                        <div class="city">City, Country</div>
+                        <div class="date">Day, Month  -- / ---- </div>
+                    </div>
+                    <div class="current">
+                        <div class="temp">Temperature: -- <span>°C</span></div>
+                        <div class="icon">
+                            <img src="" alt="" class="weather-icon">
+                        </div>
+                        <div class="weather">Weather: ----</div>
+                       
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
