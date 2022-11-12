@@ -20,15 +20,20 @@ function getData () {
         .then(response => {
             return response.json();
         }).then(displayData);
-        
+
 }
 function displayData (response) {
     // console.log(response);
     if (response.cod === "404") {
-        const error = document.querySelector(".error");
+        let error = document.querySelector(".error");    
         error.textContent = "Please enter a valid city";
         search.value = "";
+        
     } else {
+        let error = document.querySelector(".error");
+        error.textContent = "";
+        search.value = "";
+
         const city = document.querySelector(".city");
         city.innerText = `${response.name}, ${response.sys.country}`;
 
@@ -49,8 +54,13 @@ function displayData (response) {
         const iconURL = "http://openweathermap.org/img/w/";
         weatherIcon.src = iconURL + response.weather[0].icon + ".png";
 
-        search.value = "";
+        
+       
+        
+
     }
+  
+        
 }
 
 function dateFunction (d) {
